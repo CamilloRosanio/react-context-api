@@ -2,6 +2,8 @@
 
 export default function AboutPage() {
     return <>
-        <h1 className="debug">About</h1>
+        <div className="container">
+            <h1 className="debug">About</h1>
+        </div>
     </>
 }

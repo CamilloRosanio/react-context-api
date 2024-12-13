@@ -20,7 +20,9 @@ export default function DefaultLayout() {
             </main>
 
             <footer className="debug">
-                Footer
+                <div className="container">
+                    Footer
+                </div>
             </footer>
         </div>
     </>
