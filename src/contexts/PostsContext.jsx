@@ -6,8 +6,8 @@ const PostsContext = createContext();
 
 // # CONTEXT DATA
 // E' BEST-PRACTICE utilizzare un OBJECT come dati del CONTEXT da inserire nel PROVIDER
-const PostsData = {
-    PostsList: [
+const postsData = {
+    postsList: [
         {
             id: 2,
             category: 'Recipes',
@@ -57,11 +57,13 @@ const PostsData = {
 }
 
 // # PROVIDER EXPORT
+// Il provider "abbraccerà" tutti i suoi CHILDREN, a cui verranno resi disponibili i dati del VALUE
 export const PostsContextProvider = ({ children }) => {
     return <>
-        <PostsContext.Provider value={PostsData}>{children}</PostsContext.Provider>
+        <PostsContext.Provider value={postsData}>{children}</PostsContext.Provider>
     </>
 }
 
 // # USE-CONTEXT EXPORT
+// Lo USE-CONTEXT sarà importato in ciascun COMPONENT in cui saranno necessari i dati del CONTEXT
 export const usePostsContext = () => useContext(PostsContext);
